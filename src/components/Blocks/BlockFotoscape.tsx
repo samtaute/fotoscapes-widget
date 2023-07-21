@@ -15,7 +15,6 @@ const BlockFotoscape: React.FC<{ configs: BlockFotoscapeConfig }> = (props) => {
   let contentItems: FotoscapeItem[] = [];
   if (ctx.content[category]) {
     contentItems = ctx.content[category].slice(0, count); 
-    console.log(contentItems)
   }
 
   return (

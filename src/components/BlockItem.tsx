@@ -1,12 +1,18 @@
 import { FotoscapeItem } from "../definition";
 import styles from "./BlockItem.module.css"
+import { useContext } from "react";
+import SoftboxContext from "../store/softbox-context";
+
 
 const BlockItem: React.FC<{
     data: FotoscapeItem;  
 }> = ({data})=>{
-
+    const ctx = useContext(SoftboxContext)
+    const clickHandler = () =>{
+        ctx.click(data.uid, data.interests); 
+    }
     return (
-        <a href={data.url}>
+        <a href={data.url} onClick={clickHandler}>
         <div className={styles['block-item']}>
             <div className={styles['block-item__body']}>
                 <div className={styles['block-item__media']}>

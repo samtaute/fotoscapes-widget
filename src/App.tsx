@@ -24,7 +24,6 @@ const generateTemplate = (layout: ValidBlockConfig[], page:PageConfig) =>{
 
 
 function App() {
-  console.log("app");
   const ctx = useContext(SoftboxContext);
   const template: ValidBlockConfig[] = generateTemplate(layout, page)
 

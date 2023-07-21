@@ -15,6 +15,8 @@ export interface Block{
     url: string;
     imageUrl: string;
     description: string; 
+    uid: string; 
+    interests: any; 
   }
   
   
